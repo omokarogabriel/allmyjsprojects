@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: aquamarine;
+
+    .container {
+        /* background-color: aquamarine; */
+        background-image: url("/counter-app/assest/20230804_091801.jpg");
+        margin: 30px 300px 30px 300px;
+        padding: 100px 200px 100px 200px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        border-radius: 20px;
+    
+        #heading {
+            font-size: xx-large;
+            color: black;
+        }
+    
+        #countNumber {
+            font-size: 50px;
+            color: white;
+        }
+    
+    
+        .in-de {
+            display: flex;
+            flex-direction: row;
+            gap: 30px;
+    
+            .increments ,
+            .decrements{
+            padding: 10px;
+            border-radius: 10px;
+            background-color: darkred;
+            color: white;
+            }
+        }
+    
+        .sa-re {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+    
+            .save,
+            .reset,
+            .full-reset {
+                padding: 10px;
+                border-radius: 10px;
+                background-color: green;
+                color: white;
+            }
+        }
+    
+        
+        .save-count {
+            color: black;
+            font-size: larger;
+            font-weight: 400;
+        }
+    }
+}

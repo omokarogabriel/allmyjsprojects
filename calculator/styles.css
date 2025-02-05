@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+
+    .container {
+        background-color: rgb(196, 166, 166);
+        margin: 100px;
+        padding: 100px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        border-radius: 20px;
+
+        .span {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+        }
+
+        .first-span,
+        .second-span {
+            text-decoration: underline;
+            font-size: larger;
+        }
+
+        .buttons-div {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+
+            .add,
+            .minus,
+            .division,
+            .times {
+                padding: 5px;
+                border-radius: 5px;
+                background-color: green;
+                color: brown;
+            }
+        }
+
+    }
+}
