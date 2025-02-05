@@ -29,7 +29,7 @@ const paragraph = document.querySelector(".par")
 addition.addEventListener("click", (e) => {
     num1 + num2
     let store = num1 + num2
-    paragraph.textContent += store
+    paragraph.textContent = "Sum: " + store
     console.log(num1 + num2)
 })
 
@@ -43,7 +43,8 @@ addition.addEventListener("click", (e) => {
 
 subtraction.addEventListener("click", (e) => {
     num1 - num2
-    paragraph.textContent += num1 - num2
+    let store = num1 - num2
+    paragraph.textContent ="Subtract: " + store
     console.log(num1 - num2)
 })
 
@@ -51,9 +52,10 @@ subtraction.addEventListener("click", (e) => {
 
 divide.addEventListener("click", (e) => {
     if (num1 >= num2) {
-        num1 / num2
+        let store = num1 / num2
+        paragraph.textContent = "Division: " + store
     }
-    paragraph.textContent += num1 / num2
+    
     console.log(num1 / num2)
 })
 
@@ -61,6 +63,7 @@ divide.addEventListener("click", (e) => {
 // This function calls for multiplication
 multiplication.addEventListener("click", (e) => {
     num1 * num2
-    paragraph.textContent += num1 * num2
+    let store = num1 * num2
+    paragraph.textContent = "Multiplication: " + store
     console.log(num1 * num2)
 })
