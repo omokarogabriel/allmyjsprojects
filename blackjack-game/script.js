@@ -1,3 +1,4 @@
+const grandParent = document.querySelector("body")
 const head = document.querySelector(".header")
 const firstpar = document.querySelector(".first-par")
 const card1 = document.querySelector(".first-card")
@@ -22,24 +23,27 @@ let isAlive = true;
 
 button.addEventListener("click", (e) => {
     // if the sum of all nums is equal to 21, it means blackjack or winner
-    card1.textContent += num1;
-    card2.textContent += num2;
-    card3.textContent += num3;
+    card1.textContent += " " +  num1;
+    card2.textContent += " " +  num2;
+    card3.textContent += " " +  num3;
 
 
     sum = num1 + num2 + num3;
     if (sum < 21) {
-        out.textContent += "Do you want to draw a card?"
+        // out.textContent += "Do you want to draw a card?"
+        firstpar.textContent = "Do you want to draw a card?"
     }else if (sum === 21) {
         hasBlackJack = true;
-        out.textContent += "Yoo! You just got BlackJack, Hurray!"
+        // out.textContent += "Yoo! You just got BlackJack, Hurray!"
+        firstpar.textContent = "Yoo! You just got BlackJack, Hurray!"
     }else {
-        out.textContent += "You are out of the game"
+        // out.textContent += "You are out of the game"
+        firstpar.textContent = "You are out of the game"
         isAlive = false;
     }
     // console.log(message)
 
-    sums.textContent += sum
+    sums.textContent += " " + sum
     
 })
 
