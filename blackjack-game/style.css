@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+
+    background-color: green;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+        padding-top: 20px;
+
+        .header {
+            font-size: 100px;
+            color: orange;
+        }
+
+        .first-par,
+        .first-card,
+        .second-card,
+        .third-card,
+        .sum {
+            color: white;
+            font-size: xx-large;
+        }
+
+        .start-btn,
+        .reset-btn {
+            padding: 15px 30px;
+            background-color: darkblue;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .output {
+            color: gold;
+        }
+    }
+
+}
