@@ -12,6 +12,8 @@ let num1 = Math.floor(Math.random() * 10) + 1
 let num2 = Math.floor(Math.random() * 10) + 1
 let num3 = Math.floor(Math.random() * 10) + 1
 let sum;
+let hasBlackJack = false;
+let isAlive = true;
 // let message = ""
 
 
@@ -29,9 +31,11 @@ button.addEventListener("click", (e) => {
     if (sum < 21) {
         out.textContent += "Do you want to draw a card?"
     }else if (sum === 21) {
+        hasBlackJack = true;
         out.textContent += "Yoo! You just got BlackJack, Hurray!"
     }else {
         out.textContent += "You are out of the game"
+        isAlive = false;
     }
     // console.log(message)
 
