@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: aquamarine;
+
+
+    .container {
+        background-color: white;
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+        margin: 40px 450px;
+        border-radius: 10px;
+        padding: 50px;
+        border: rgb(196, 206, 196) solid 5px;
+
+        h1 {
+            font-size: smaller;
+            text-align: center;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            
+
+            input {
+                padding: 10px;
+                border-radius: 5px;
+                border-style: none;
+                background-color: rgb(238, 232, 232);
+            }
+
+            button {
+                padding: 10px;
+                background-color: green;
+                color: white;
+                border-radius: 5px;
+            }
+
+            .error-cpword {
+                color: red;
+                font-size: smaller;
+            }
+        }
+    }
+}
