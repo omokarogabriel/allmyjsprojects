@@ -79,10 +79,10 @@ document.querySelector("#form").addEventListener('submit', (e) => {
 
     // VALIDATE THE PASSWORD
     
-    // if (pword.length < 8 ||!/[a-z]/.test(pword) ||!/[A-Z]/.test(pword) ||!/\d/.test(pword) ||!/[@$!%*?&]/.test(pword)) {
-        //     alert("Password must be at least 8 characters long, contain at least one uppercase letter, one lowercase letter, one number, and one special character")
-    //     return
-    // }
+    if (pword.length < 8 ||!/[a-z]/.test(pword) ||!/[A-Z]/.test(pword) ||!/\d/.test(pword) ||!/[@$!%*?&]/.test(pword)) {
+            alert("Password must be at least 8 characters long, contain at least one uppercase letter, one lowercase letter, one number, and one special character")
+        return
+    }
 
     // VALIDATE THE PASSWORD AND CONFIRM PASSWORD
 
