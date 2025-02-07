@@ -22,16 +22,16 @@ body {
         }
 
         .first-par,
-        .first-card,
-        .second-card,
-        .third-card,
+        /* .first-card, */
+        /* .second-card, */
+        .cards,
         .sum {
             color: white;
             font-size: xx-large;
         }
 
         .start-btn,
-        .reset-btn {
+        .new-card-btn {
             padding: 15px 30px;
             background-color: orange;
             color: white;

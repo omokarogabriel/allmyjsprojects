@@ -1,20 +1,26 @@
 const grandParent = document.querySelector("body")
 const head = document.querySelector(".header")
 const firstpar = document.querySelector(".first-par")
-const card1 = document.querySelector(".first-card")
-const card2 = document.querySelector(".second-card")
-const card3 = document.querySelector(".third-card")
-const sums = document.querySelector(".sum")
+const myCards = document.querySelector(".cards")
+
+// const card2 = document.querySelector(".second-card")
+// const card3 = document.querySelector(".third-card")
+
+let sums = document.querySelector(".sum")
 const button = document.querySelector(".start-btn")
-// const reset = document.querySelector(".reset-btn")
+// let newCard = document.querySelector(".card-new-btn")
 const out  = document.querySelector(".output")
 
-let num1 = Math.floor(Math.random() * 10) + 1
-let num2 = Math.floor(Math.random() * 10) + 1
-let num3 = Math.floor(Math.random() * 10) + 1
+let card1 = Math.floor(Math.random() * 11) + 1
+let card2 = Math.floor(Math.random() * 11) + 1
+let card3 = Math.floor(Math.random() * 11) + 1
+// console.log(card3)
 let sum;
 let hasBlackJack = false;
 let isAlive = true;
+let allCards = [card1, card2];
+
+
 // let message = ""
 
 
@@ -23,37 +29,51 @@ let isAlive = true;
 
 button.addEventListener("click", (e) => {
     // if the sum of all nums is equal to 21, it means blackjack or winner
-    card1.textContent += " " +  num1;
-    card2.textContent += " " +  num2;
-    card3.textContent += " " +  num3;
+    // card1.textContent += " " +  num1;
+    // card2.textContent += " " +  num2;
+    // card3.textContent += " " +  num3;
+
+    // allCards.push()
+    myCards.textContent += " " + allCards;
 
 
-    sum = num1 + num2 + num3;
+    sum = card1 + card2;
+    console.log(sum)
+    
     if (sum < 21) {
-        // out.textContent += "Do you want to draw a card?"
-        firstpar.textContent = "Do you want to draw a card?"
+        firstpar.textContent = " Kindly Draw a Card?"
+        // Event Listener to get a new card
+       document.querySelector(".new-card-btn").addEventListener('click', (e) => {
+           myCards.textContent += "," + card3;
+           sums.textContent = "Sum: " + ""
+           sum += card3;
+           sums.textContent += " " + sum
+           console.log(sum)
+           if (!sum <= 21) {
+            firstpar.textContent = "Draw a Card?"
+            
+           }
+        })
     }else if (sum === 21) {
         hasBlackJack = true;
-        // out.textContent += "Yoo! You just got BlackJack, Hurray!"
         firstpar.textContent = "Yoo! You just got BlackJack, Hurray!"
     }else {
-        // out.textContent += "You are out of the game"
         firstpar.textContent = "You are out of the game"
         isAlive = false;
     }
-    // console.log(message)
+    
 
+
+    
     sums.textContent += " " + sum
+    
+
+    myCards.textContent;
     
 })
 
-// reset.addEventListener("click", (e) => {
-//     sum = 0
-//     card2.textContent += 0;
-//     card1.textContent += 0;
-//     card3.textContent += 0;
-
-//    if (sum === 0 && card1.textContent === 0 && card2.textContent === 0 && card3.textContent === 0) {
-//     return
-//    }
-// })
+// document.querySelector(".new-card-btn").addEventListener('click', (e) => {
+    
+//     allCards.push(card3);
+//     sum += card3
+//    })
