@@ -40,8 +40,9 @@ body {
             cursor: pointer;
         }
 
-        .output {
-            color: gold;
+        .output-name {
+            padding-top: 50px;
+            color: white;
         }
     }
 
